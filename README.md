@@ -42,12 +42,44 @@ Then, add *C:\vcpkg\installed\x64-windows\bin* and *C:\vcpkg\installed\x64-windo
 3. Compile: `cmake .. && make`
 4. Run it: `./2D_feature_tracking`.
 
+### WriteUp
+## MP.1 Data Buffer Optimization
+_Lines 102 - 114 in MidTermProject_Camera_Student.cpp_
+A Cyclic Ring buffer was implemented with a length of 2 to avoid unnecessary saved images in the buffer.
 
-### Performance Results
+## MP.2 Keypoint Detection
+_Lines 153 - 280 in matching2D_Student.cpp_
+Implemented detectors HARRIS, FAST, BRISK, ORB, AKAZE, and SIFT with the default values and made them selectable by setting a string accordingly.
 
+## MP.3 Keypoint Removal
+_Lines 155 - 168 in MidTermProject_Camera_Student.cpp_
+Remove all keypoints outside of a pre-defined rectangle and only use the keypoints within the rectangle for further processing.
+
+## MP.4 Keypoint Descriptors
+_Lines 63 - 110 in matching2D_Student.cpp_
+Implement descriptors BRIEF, ORB, FREAK, AKAZE and SIFT and make them selectable by setting a string accordingly.
+
+## MP.5 Descriptor Matching
+_Lines 7 - 60 in matching2D_Student.cpp_
+Implement FLANN matching as well as k-nearest neighbor selection. Both methods must be selectable using the respective strings in the main function.
+
+## MP.6 Descriptor Distance Ratio
+_Lines 7 - 60 in matching2D_Student.cpp_
+Added KNN match selection and perform descriptor distance ratio filtering with t=0.8
+
+## MP.7 Performance Evaluation 1
 The performance results are presented in Results.xlsx
+<img src="images/Table1.png" width="820" height="248" />
 
-### Detector / Descriptor Recommendations
+## MP.8 Performance Evaluation 2
+The performance results are presented in Results.xlsx
+<img src="images/Table2.png" width="820" height="248" />
+
+## MP.9 Performance Evaluation 3
+The performance results are presented in Results.xlsx
+<img src="images/Table3.png" width="820" height="248" />
+
+#### Detector / Descriptor Recommendations
 
 The combination recommendation is based on a score function with the highest score to the combination with the most matching keypoints and least runtime. 
                                         
@@ -56,6 +88,3 @@ The combination recommendation is based on a score function with the highest sco
 * Rank 1 : FAST - BRIEF. 
 * Rank 2 : FAST - ORB. 
 * Rank 3 : ORB  - BRIEF. 
-
-
-# SFND_2D_Feature_Tracking
