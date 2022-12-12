@@ -69,15 +69,15 @@ Added KNN match selection and perform descriptor distance ratio filtering with t
 
 ## MP.7 Performance Evaluation 1
 The performance results are presented in Results.xlsx
-<img src="images/Table1.png" width="820" height="248" />
+<img src="images/Table1.PNG" width="820" height="248" />
 
 ## MP.8 Performance Evaluation 2
 The performance results are presented in Results.xlsx
-<img src="images/Table2.png" width="820" height="248" />
+<img src="images/Table2.PNG" width="820" height="248" />
 
 ## MP.9 Performance Evaluation 3
 The performance results are presented in Results.xlsx
-<img src="images/Table3.png" width="820" height="248" />
+<img src="images/Table3.PNG" width="820" height="248" />
 
 #### Detector / Descriptor Recommendations
 
